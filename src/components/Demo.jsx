@@ -31,7 +31,7 @@ const Demo = () => {
     
     if (data?.summary) {
       const newArticle = {...article, summary: data.summary};
-      const updatedAllArticle = [newArticle, ...setAllArticles]; 
+      const updatedAllArticle = [newArticle, ...allArticles]; 
 
       setArticle(newArticle);
       setAllArticles(updatedAllArticle);
@@ -74,12 +74,12 @@ const Demo = () => {
               <div
                 key={`link-${index}`}
                 onClick={() => setArticle(item)}
-                className='link-card'
+                className='link_card'
               >
-                <div className='copy-btn'>
+                <div className='copy_btn'>
                   <img src={copy} alt="copy-icon" className='w-[40%] h-[40%] object-contain'/>
                 </div>
-                <p>
+                <p className='flex-1 font-satoshi text-blue-700 font-medium text-sm truncate'>
                   {item.url}
                 </p>
               </div>
